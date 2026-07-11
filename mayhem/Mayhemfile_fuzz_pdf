@@ -1,0 +1,9 @@
+project: cups-filters
+target: fuzz_pdf
+cmds:
+  - cmd: /mayhem/fuzz_pdf
+    libfuzzer: true
+    dictionary: /mayhem/mayhem/fuzz_pdf.dict
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_pdf/testsuite
